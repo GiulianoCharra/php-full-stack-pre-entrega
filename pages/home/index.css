@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  max-width: 1600;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-movil {
+  display: none;
+}
+
+.separador {
+  width: 80%;
+}
+
+footer {
+  justify-content: center;
+  gap: 5%;
+}
