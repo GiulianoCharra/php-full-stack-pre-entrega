@@ -10,6 +10,7 @@
   --c-tecto-oscuro: black;
 
   font-size: 1.15rem;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -55,7 +56,8 @@ section {
   min-height: 100vh;
   padding-block: 50px;
   gap: 20px;
-  background-image: linear-gradient(to right top, #0000008a, #0000008a), url(./images/banner-bg.jpg);
+  background-image: linear-gradient(to right top, #0000008a, #0000008a),
+    url(./assets/images/banner-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -91,6 +93,7 @@ header {
   padding: 10px 30px;
 
   position: fixed;
+  z-index: 100;
 }
 
 a {
@@ -223,6 +226,10 @@ footer {
   flex-wrap: wrap;
   gap: 5%;
   padding-block: 20px;
+}
+
+.logo-TMDb {
+  width: 50px;
 }
 
 ::-webkit-scrollbar {
