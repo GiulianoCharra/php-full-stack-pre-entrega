@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url(./css/buton.css);
+@import url(./css/card-pelicula.css);
+
+:root {
+  --color-principal: #9f3647;
+  --color-secundario: #181419;
+  --c: #171717;
+  --c-texto-claro: white;
+  --c-tecto-oscuro: black;
+
+  font-size: 1.15rem;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.nunito {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Nunito;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100svh;
+  background-color: var(--color-secundario);
+  color: var(--c-texto-claro);
+}
+
+header,
+main,
+footer,
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.seccion-inicial {
+  width: 100vw;
+  min-height: 100vh;
+  padding-block: 50px;
+  gap: 20px;
+  background-image: linear-gradient(to right top, #0000008a, #0000008a), url(./images/banner-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.seccion-inicial h1 {
+  font-size: 4rem;
+}
+
+.seccion-inicial h2 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.cont {
+  display: flex;
+}
+
+.cont--col {
+  flex-direction: column;
+}
+
+.cont--ai-center {
+  align-items: center;
+}
+
+.cont--jc-center {
+  justify-content: center;
+}
+
+header {
+  flex-direction: row;
+  background-color: var(--color-principal);
+  padding: 10px 30px;
+
+  position: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: var(--c-texto-claro);
+  font-size: 1.15rem;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: scale 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+a:hover {
+  scale: 0.95;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  width: fit-content;
+}
+
+main {
+  flex-grow: 1;
+  padding-inline: clamp(10px, 5vw, 100vw);
+}
+
+main,
+section {
+  justify-content: center;
+}
+
+section {
+  max-width: 1600px;
+  padding-block: 50px;
+}
+
+.seccion__titulo {
+  font-size: 2rem;
+}
+
+.seccion-buscador {
+  padding-block: 50px;
+  gap: 20px;
+}
+
+.contenedor-buscador {
+  gap: 10%;
+}
+
+.contenedor-buscador button {
+  font-size: 1.15rem;
+}
+
+.buscador-pelicula {
+  min-width: 300px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  outline: 3px solid transparent;
+  transition: outline-color 0.2s;
+}
+
+.buscador-pelicula:focus-visible {
+  outline-color: var(--color-principal);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-movil {
+  display: none;
+}
+
+.seccion-tendencias {
+  padding-block: 50px;
+  gap: 20px;
+}
+.seccion-peliculas-aclamadas {
+  gap: 20px;
+}
+
+.contenedor-listado-peliculas {
+  width: 100%;
+}
+
+.listado-peliculas {
+  width: 100%;
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+}
+
+.listado-peliculas--tendencias {
+  flex-wrap: wrap;
+}
+
+.listado-peliculas--aclamadas {
+  padding-inline: 20px;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  flex-direction: row;
+}
+
+.botones-navegacion {
+  gap: 10%;
+}
+
+.separador {
+  width: 80%;
+  height: 2px;
+  background-color: var(--color-principal);
+}
+
+footer {
+  background-color: var(--color-principal);
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5%;
+  padding-block: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  max-width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-principal);
+}
+
+::-webkit-scrollbar {
+}

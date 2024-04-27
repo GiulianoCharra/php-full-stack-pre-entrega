@@ -1,0 +1,38 @@
+.card-pelicula {
+  border-radius: 10px;
+  width: 200px;
+  flex-shrink: 0;
+  aspect-ratio: 2/3;
+  cursor: pointer;
+  position: relative;
+  display: grid;
+  place-items: center;
+  --duracion-animacion: 0.5s;
+  overflow: hidden;
+}
+
+.card-pelicula__imagen,
+.card-pelicula__titulo {
+  position: absolute;
+}
+
+.card-pelicula__titulo {
+  opacity: 0;
+  scale: 0.8;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition-property: opacity, scale;
+  transition-duration: var(--duracion-animacion);
+}
+
+.card-pelicula__imagen {
+  transition: filter 0.2s;
+}
+
+.card-pelicula:hover .card-pelicula__imagen {
+  filter: blur(5px);
+}
+.card-pelicula:hover .card-pelicula__titulo {
+  scale: 1;
+  opacity: 1;
+}

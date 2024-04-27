@@ -1,0 +1,32 @@
+button {
+  border: none;
+  outline: none;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1.15rem;
+  border-radius: 5px;
+}
+
+.boton {
+  display: grid;
+  place-items: center;
+}
+
+.boton--principal {
+  background-color: var(--color-principal);
+  color: var(--c-texto-claro);
+}
+
+.boton--secundario {
+  background-color: var(--color-secundario);
+  color: var(--c-texto-claro);
+}
+
+.boton--secundario:hover {
+  background-color: #9f3647;
+  color: var(--c-texto-claro);
+}
+
+.boton-buscar {
+}
