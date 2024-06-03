@@ -19,6 +19,7 @@
 .card-pelicula__titulo {
   opacity: 0;
   scale: 0.8;
+  text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
   transition-property: opacity, scale;
@@ -27,6 +28,10 @@
 
 .card-pelicula__imagen {
   transition: filter 0.2s;
+  width: 200px;
+  height: 300px;
+  display: grid;
+  place-items: center;
 }
 
 .card-pelicula:hover .card-pelicula__imagen {
@@ -35,4 +40,15 @@
 .card-pelicula:hover .card-pelicula__titulo {
   scale: 1;
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .card-pelicula {
+    width: 40%;
+  }
+
+  .card-pelicula__imagen {
+    width: 100%;
+    height: 200px;
+  }
 }

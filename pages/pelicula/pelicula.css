@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url(../../css/buton.css);
+
+:root {
+  --color-principal: #9f3647;
+  --color-secundario: #181419;
+  --c: #171717;
+  --c-texto-claro: white;
+  --c-texto-oscuro: black;
+
+  font-size: 1.15rem;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.nunito {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Nunito;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100svh;
+  background-color: var(--color-secundario);
+  color: var(--c-texto-claro);
+}
+
+header,
+main,
+footer,
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .seccion-inicial {
+    padding-block: 20px;
+  }
+
+  .seccion-inicial h1 {
+    font-size: 2.5rem;
+  }
+  .seccion-inicial h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.cont {
+  display: flex;
+}
+
+.cont--col {
+  flex-direction: column;
+}
+
+.cont--ai-center {
+  align-items: center;
+}
+
+.cont--jc-center {
+  justify-content: center;
+}
+
+header {
+  flex-direction: row;
+  background-color: var(--color-principal);
+  padding: 10px 30px;
+  position: fixed;
+  z-index: 100;
+}
+
+a {
+  text-decoration: none;
+  color: var(--c-texto-claro);
+  font-size: 1.15rem;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: scale 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+a:hover {
+  scale: 0.95;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  width: fit-content;
+}
+
+main {
+  flex-grow: 1;
+  padding-top: 60px;
+}
+
+main,
+section {
+  justify-content: flex-start;
+}
+
+section {
+}
+
+.seccion__titulo {
+  font-size: 2rem;
+}
+
+.contenedor-buscador {
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .contenedor-buscador {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.buscador-pelicula {
+  min-width: 300px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  outline: 3px solid transparent;
+  transition: outline-color 0.2s;
+}
+
+.buscador-pelicula:focus-visible {
+  outline-color: var(--color-principal);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, calc(5vw - 10px), 50px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-movil {
+  display: none;
+}
+
+.menu-movil {
+  display: none;
+}
+
+.menu-opciones {
+  display: none;
+}
+
+.menu-opciones.activo {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-secundario);
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.menu-movil.activo .menu-opciones {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .menu-movil {
+    display: flex;
+  }
+}
+
+.botones-navegacion {
+  gap: 10%;
+}
+
+footer {
+  background-color: var(--color-principal);
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5%;
+  padding-block: 20px;
+}
+
+.logo-TMDb {
+  width: 50px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  max-width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-principal);
+}
+
+.mainDetalle {
+  .detalle {
+    padding-top: 50px;
+    background: linear-gradient(to right top, #6d6969a7, #6d6969a7), var(--url-imagen-pelicula);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    .contenedorDetalle {
+      width: 75%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 60px;
+      img {
+        border-radius: 20px;
+      }
+      .textoDetalle {
+        h1 {
+          font-size: 2.2rem;
+          font-weight: 700;
+        }
+        h2 {
+          margin-top: 20px;
+        }
+        .contenedorCreditos {
+          margin-top: 20px;
+          display: flex;
+          gap: 40px;
+        }
+      }
+    }
+  }
+
+  .trailer {
+    max-width: 1600px;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    padding-inline: clamp(10px, 5vw, 100px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 70px;
+    .contenedorInfo {
+      width: 50%;
+      .redes {
+        margin-bottom: 20px;
+        ul {
+          list-style: none;
+          display: flex;
+          justify-content: space-between;
+          column-gap: 20px;
+          li {
+            a {
+              text-decoration: none;
+              color: #ffffff;
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+      .info {
+        table {
+          width: 100%;
+          tr {
+            td {
+              font-size: 1.2rem;
+              padding: 10px 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainDetalle {
+    .detalle {
+      height: initial;
+      .contenedorDetalle {
+        flex-direction: column;
+        row-gap: 20px;
+        img {
+          width: 100%;
+          height: 300px;
+        }
+        .textoDetalle {
+          h1 {
+            font-size: 1.5rem;
+          }
+          h2 {
+            font-size: 1rem;
+          }
+          .contenedorCreditos {
+            flex-direction: column;
+            row-gap: 10px;
+          }
+        }
+      }
+    }
+    .trailer {
+      width: 95%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      flex-direction: column;
+      row-gap: 20px;
+      .contenedorTrailer {
+        width: 100%;
+        h2 {
+          margin-bottom: 20px;
+        }
+        iframe {
+          width: 100%;
+          height: 300px;
+        }
+      }
+      .contenedorInfo {
+        width: 100%;
+        .redes {
+          width: 100%;
+          ul {
+            width: 100%;
+            flex-wrap: wrap;
+            li {
+              a {
+                font-size: 2rem;
+                margin-right: 20px;
+              }
+            }
+          }
+        }
+        .info {
+          table {
+            tr {
+              td {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

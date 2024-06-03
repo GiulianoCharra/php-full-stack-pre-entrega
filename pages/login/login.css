@@ -1,0 +1,131 @@
+@import url(../../style.css);
+
+body {
+  background: linear-gradient(to right top, #24242473, #24242473),
+    url(../../assets/images/bg-register.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--c-texto-claro);
+  font-size: 1.15rem;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: scale 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(95%, 600px);
+  gap: 20px;
+  padding: 20px;
+  padding-block: 50px;
+  background-color: var(--color-secundario);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.show-password {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--c-texto-oscuro);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+form label {
+  display: block;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+
+form label input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  border-radius: 5px;
+  background-color: var(--c-fondo);
+  color: var(--c-texto-oscuro);
+}
+
+form label:has(input:focus-visible) {
+  background-color: #fafafa;
+  border: none;
+  outline: var(--color-principal) solid 5px;
+  color: var(--c-texto-oscuro);
+}
+
+form label input:focus-visible {
+  border: none;
+  outline: none;
+}
+
+form label input::placeholder {
+  color: var(--c-texto-oscuro);
+}
+.password-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* estilo para el boton de enviar */
+.login-form-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-principal);
+  color: var(--c-texto-claro);
+  cursor: pointer;
+  transition: scale 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.login-form-button:hover {
+  scale: 0.95;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.login-form-button:focus-visible {
+  background-color: #fafafa;
+  border: none;
+  outline: var(--color-principal) solid 5px;
+  color: var(--c-texto-oscuro);
+}
+
+@media screen and (max-width: 768px) {
+  .login-form-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.login-form-text a:hover {
+  background-color: var(--color-principal);
+  color: var(--c-texto-claro);
+}

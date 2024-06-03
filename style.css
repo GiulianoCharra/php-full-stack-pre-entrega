@@ -7,7 +7,7 @@
   --color-secundario: #181419;
   --c: #171717;
   --c-texto-claro: white;
-  --c-tecto-oscuro: black;
+  --c-texto-oscuro: black;
 
   font-size: 1.15rem;
   scroll-behavior: smooth;
@@ -60,6 +60,7 @@ section {
     url(./assets/images/banner-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
 }
 
 .seccion-inicial h1 {
@@ -69,6 +70,19 @@ section {
 .seccion-inicial h2 {
   font-size: 2rem;
   font-weight: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .seccion-inicial {
+    padding-block: 20px;
+  }
+
+  .seccion-inicial h1 {
+    font-size: 2.5rem;
+  }
+  .seccion-inicial h2 {
+    font-size: 1.5rem;
+  }
 }
 
 .cont {
@@ -91,7 +105,6 @@ header {
   flex-direction: row;
   background-color: var(--color-principal);
   padding: 10px 30px;
-
   position: fixed;
   z-index: 100;
 }
@@ -141,11 +154,14 @@ section {
 }
 
 .contenedor-buscador {
-  gap: 10%;
+  gap: 20px;
 }
 
-.contenedor-buscador button {
-  font-size: 1.15rem;
+@media (max-width: 768px) {
+  .contenedor-buscador {
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .buscador-pelicula {
@@ -166,7 +182,7 @@ section {
 .menu {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: clamp(10px, calc(5vw - 10px), 50px);
 }
 
 .logo {
@@ -179,10 +195,43 @@ section {
   display: none;
 }
 
+.menu-movil {
+  display: none;
+}
+
+.menu-opciones {
+  display: none;
+}
+
+.menu-opciones.activo {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-secundario);
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.menu-movil.activo .menu-opciones {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .menu-movil {
+    display: flex;
+  }
+}
 .seccion-tendencias {
   padding-block: 50px;
   gap: 20px;
 }
+
 .seccion-peliculas-aclamadas {
   gap: 20px;
 }
@@ -194,7 +243,7 @@ section {
 .listado-peliculas {
   width: 100%;
   display: flex;
-  gap: 5%;
+  gap: clamp(10px, 5vw, 50px);
   justify-content: center;
 }
 
@@ -203,6 +252,7 @@ section {
 }
 
 .listado-peliculas--aclamadas {
+  padding-bottom: 30px;
   padding-inline: 20px;
   justify-content: flex-start;
   overflow-x: scroll;
@@ -240,7 +290,4 @@ footer {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-principal);
-}
-
-::-webkit-scrollbar {
 }

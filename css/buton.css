@@ -29,4 +29,11 @@ button {
 }
 
 .boton-buscar {
+  font-size: 1.15rem;
+}
+
+@media screen and (max-width: 768px) {
+  .boton-buscar {
+    width: 50%;
+  }
 }
