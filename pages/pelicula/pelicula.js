@@ -11,6 +11,10 @@ function getMovieIdFromURL() {
 // Función para generar el HTML de los detalles de la película
 function generateMovieDetailsHTML(movie) {
   // Filtrar los directores y escritores
+
+  //modificar el tittle de la pagina
+  document.title = `CAC-MOVIES ${movie.title}`;
+
   const directorsAndWriters = movie.credits.crew.filter(
     (crewMember) => crewMember.job === "Director" || crewMember.job === "Writer"
   );
